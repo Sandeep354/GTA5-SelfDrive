@@ -3,6 +3,15 @@ Deep Learning AI trying to drive on the paths of GTA5 and hopefully not hit any 
 
 I am training the model on the mini-map image rather than the actual road image. Hope it works!
 
+These are the following I wish to execute in the algorithm:
+1. Drive via GPS from the mini-map
+
+      1.a) Also try to orient itself in the direction of GPS lanes if the car gets hit or gets off track.
+  
+2. Object Detection and avoid collision, overtake, etc.
+
+**PART-1**
+
 This is the mini-map image of GTA5.
 
 ![](images/minimap_example.png)
