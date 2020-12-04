@@ -17,7 +17,7 @@ This is the mini-map image of GTA5.
 
 ![](images/minimap_example.png)
 
-I only want to focus on the path. So, this is final ouput i want to feed in the Alexnet model to train
+I only want to focus on the path. So, this is final ouput i want to feed in the **Alexnet** model to train (I will try to use GoogleNet later)
 
 ![](images/lane_1.png)
 
