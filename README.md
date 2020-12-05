@@ -38,7 +38,7 @@ So, this is final ouput i want to feed to the Alexnet model.
 
 I have uploaded GPS-data.csv. This is the csv version of training data after **balance_data.py**. 
 
-But in that code, i have taken left, right, forward, reverse, brake and nothing --> 1x6 array. Turns out this is very heavy computing and I wanted to try only left, right and forward movement --> 1x3 array. So i have done that via new_balance_data.py. Now we have [0, 0, 0] where, left : [1,0, 0], forward : [0, 1, 0], right : [0, 0, 1].
+But in that code, i have taken left, right, forward, reverse, brake and nothing --> 1x6 array. Turns out this is very heavy computing and I wanted to try only left, right and forward movement --> 1x3 array. So i have done that via **new_balance_data.py**. Now we have, left : [1,0, 0], forward : [0, 1, 0], right : [0, 0, 1].
 
 
 
