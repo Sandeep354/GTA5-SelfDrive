@@ -23,8 +23,8 @@ I only want to focus on the path.
 
 ![](images/lane_1.png)
 
-Before feeding into model to train, I will also do a **Canny** and **GaussianBlur** on the output image to reduce the dimensionality (from 3 color channels to 1). You can use only **cv2.COLOR_BGR2GRAY** but i figured that training the model on edges rather than whole lanes will easier to compute, memory and time wise.
-
-![](images/final_lane.png)
-
 So, this is final ouput i want to feed in the **Alexnet** model to train (I will try to use GoogleNet later)
+
+Alexnet default input shape in 224x224x3. So im passing 3 channeled image (rather than grayscale). 
+
+
