@@ -57,10 +57,12 @@ def lane_finder(image):
     #Canny and Blurring 
     #lane = cv2.cvtColor(lane, cv2.COLOR_HSV2RGB)	
     #lane = cv2.cvtColor(lane, cv2.COLOR_RGB2GRAY)
-    lane = cv2.Canny(lane, threshold1=200, threshold2=300)
-    lane = cv2.GaussianBlur(lane, (3,3), 0 )
+    #lane = cv2.Canny(lane, threshold1=200, threshold2=300)
+    #lane = cv2.GaussianBlur(lane, (3,3), 0 )
 
     # Doing edge detection of path will compute less than doing whole path detection
+    # Since alexnet takes rgb channels, i dont see the point in grayscaling or doing edging with Canny. 
+    # So I'll leave the data as a RGB (or HSV doesn't matter).
 
     return lane
 
