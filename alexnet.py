@@ -45,8 +45,9 @@ def alexnet(width, height, lr):
 
 ###############################################################################
 
-def alexnet2(width, height, lr):
-    network = input_data(shape=[None, width, height, 1], name='input') #(w,h) is (80, 60) set by us previously
+def alexnet2(width, height, lr, output=3):
+    #network = input_data(shape=[None, width, height, 1], name='input') #(w,h) is (160, 120) set by us previously
+    network = input_data(shape=[None, width, height, 3], name='input') #Alexnet default is 224x224x3 but iam passing 160x120x3
 
     #conv_2d(input, # of filters, each filter/kernel size n for nxn, strides, activation)
     network = conv_2d(network, 96, 11, strides=4, activation='relu')
@@ -78,7 +79,7 @@ def alexnet2(width, height, lr):
     network = dropout(network, 0.7)
     network = fully_connected(network, 4096, activation='tanh')
     network = dropout(network, 0.7)
-    network = fully_connected(network, 3, activation='softmax')
+    network = fully_connected(network, output, activation='softmax')
 
     # Linear/Logistic Regression
     network = regression(network, optimizer='momentum',
