@@ -73,26 +73,29 @@ def main():
             print (moves, prediction)
 
             if moves == [1,0,0]:
-                if prediction >= 0.85:
-                    left(t=0.5)
-                elif 0.5 < prediction < 0.8:
-                    left(t=0.2)
+                pred = prediction[0]
+                if pred >= 0.85:
+                    left(t=0.25)
+                elif 0.5 < pred < 0.85:
+                    left(t=0.1)
                 else:
-                    left(t=0.05)
+                    continue
             elif moves == [0,1,0]:
-                if prediction >= 0.85:
+                pred = prediction[1]
+                if pred >= 0.85:
                     straight(t=0.5)
-                elif 0.5 < prediction < 0.8:
-                    straight(t=0.2)
+                elif 0.5 < pred < 0.85:
+                    straight(t=0.25)
                 else:
-                    straight(t=0.05)
+                    continue
             elif moves == [0,0,1]:
-                if prediction >= 0.85:
-                    right(t=0.5)
-                elif 0.5 < prediction < 0.8:
-                    right(t=0.2)
+                pred = prediction[2]
+                if pred >= 0.85:
+                    right(t=0.25)
+                elif 0.5 < pred < 0.85:
+                    right(t=0.1)
                 else:
-                    right(t=0.05)
+                    continue
             else:
                 PressKey(W)
                 time.sleep(0.2)
@@ -113,4 +116,7 @@ def main():
 
 
 main()
+
+
+
 
